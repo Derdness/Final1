@@ -12,13 +12,12 @@ foreach(string word in words)   //Подсчитываем слова длино
     }
 }
 string[] result = new string[lthan3s]; //Инициализируем результирующий массив
-int forward = 0;                       //Записываем слова длиной <= 3 в новый массив
-foreach(string word in words)
+int forward = 0;                       //Индекс следующего элемента в массиве ответов
+foreach(string word in words)          //Записываем слова длиной <= 3 в новый массив
 {
     if(word.Length < 4)
     {
-        result[forward] = word;
-        forward++;
+        result[forward++] = word;
     }
 }
 foreach(string word in result)          //Выводим результат
